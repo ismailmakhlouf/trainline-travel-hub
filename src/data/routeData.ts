@@ -569,6 +569,108 @@ export const ROUTE_DATA: Record<string, RouteData> = {
         }
       ]
     }
+  },
+
+  // Manchester to Mumbai - Rail to airport + Flights
+  "manchester-mumbai": {
+    id: "manchester-mumbai",
+    from: "Manchester Airport",
+    to: "Mumbai Chhatrapati Shivaji International",
+    country: "India",
+    region: "South Asia",
+    rail: {
+      operator: "TransPennine Express + Airlines",
+      duration: "25m + 9h 45m",
+      classes: [
+        {
+          name: "Standard",
+          price: 15,
+          points: 10,
+          features: ["To Manchester Airport T1/T2"]
+        }
+      ]
+    },
+    flights: {
+      airlines: [
+        {
+          id: "ba-mcr-mumbai",
+          airline: "British Airways",
+          duration: "9h 45m",
+          economyPrice: 445,
+          businessPrice: 2550,
+          firstPrice: 4700,
+          airlineMiles: 4480,
+          loyaltyProgram: "Executive Club",
+          tierBoost: 28
+        },
+        {
+          id: "ai-mcr-mumbai",
+          airline: "Air India",
+          duration: "9h 30m",
+          economyPrice: 415,
+          businessPrice: 2250,
+          airlineMiles: 4480,
+          loyaltyProgram: "Flying Returns",
+          tierBoost: 26
+        },
+        {
+          id: "vs-mcr-mumbai",
+          airline: "Virgin Atlantic",
+          duration: "9h 50m",
+          economyPrice: 465,
+          businessPrice: 2650,
+          airlineMiles: 4480,
+          loyaltyProgram: "Flying Club",
+          tierBoost: 27
+        }
+      ],
+      duration: "9h 30m - 9h 50m"
+    },
+    hotelDestination: {
+      city: "Mumbai",
+      hotels: [
+        {
+          id: "mumbai-h1",
+          name: "The Taj Mahal Palace",
+          stars: 5,
+          bookingPrice: 345,
+          agodaPrice: 325,
+          trainlinePrice: 285,
+          hotelPoints: 95,
+          tierBoost: 12
+        },
+        {
+          id: "mumbai-h2",
+          name: "The Oberoi Mumbai",
+          stars: 5,
+          bookingPrice: 425,
+          agodaPrice: 405,
+          trainlinePrice: 365,
+          hotelPoints: 115,
+          tierBoost: 14
+        },
+        {
+          id: "mumbai-h3",
+          name: "ITC Grand Central",
+          stars: 5,
+          bookingPrice: 265,
+          agodaPrice: 255,
+          trainlinePrice: 225,
+          hotelPoints: 75,
+          tierBoost: 10
+        },
+        {
+          id: "mumbai-h4",
+          name: "Trident Bandra Kurla",
+          stars: 5,
+          bookingPrice: 195,
+          agodaPrice: 185,
+          trainlinePrice: 165,
+          hotelPoints: 55,
+          tierBoost: 8
+        }
+      ]
+    }
   }
 };
 

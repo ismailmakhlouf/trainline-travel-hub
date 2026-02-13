@@ -1,0 +1,14 @@
+# Databricks Apps Configuration
+# This file configures how the Trainline Travel Hub app runs on Databricks Apps
+
+command: ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "8080"]
+
+env:
+  - name: NODE_ENV
+    value: production
+  - name: VITE_APP_TITLE
+    value: "Trainline Travel Hub"
+
+resources:
+  cpu: "1"
+  memory: "2Gi"
